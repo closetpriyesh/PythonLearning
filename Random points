@@ -1,0 +1,45 @@
+Anaconda is an open-source Python distribution that makes it easy to get up and running with different libraries and packages
+and it comes with its own package manager called Conda
+
+
+// Virtual env using Conda
+
+conda create --name my_app package_name1 package_name2 # atleast one package is required
+
+mac
+source activate my_app
+windows
+activate my_app
+
+mac
+source deactivate
+windows
+deactivate
+
+conda create --name my_app python=2.7 package_name1 package_name2
+
+
+conda env export > environment.yml
+
+
+# How to open a yml file on windows?
+
+conda env create -f environment.yml # replicates the env to another project
+
+
+Two directories in project env directory
+
+Activate directory : will contain scripts that will run when the env is activated
+Deactivate directory
+
+Python scope
+
+'''
+LEGB
+Local, Enclosing, Global, Built-in
+'''
+
+when wanna use global variable , let's say in a local scope, just write
+global x (not recommended to use)
+
+In case of enclosing functions, just use 'nonlocal' to refer to outer function variables

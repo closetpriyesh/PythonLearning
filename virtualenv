@@ -1,0 +1,8 @@
+virtualenv -p %python location% env_name
+
+virtualenv -p /usr/bin/python2.6 py26_env
+
+source py26_env/bin/activate
+
+deactivate: deactivates the current python env and switches back to global env
+
